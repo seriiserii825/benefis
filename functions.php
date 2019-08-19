@@ -7,6 +7,7 @@
  * @package benefis
  */
 
+
 if ( ! function_exists( 'benefis_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -331,17 +332,19 @@ class Child_Wrap extends Walker_Nav_Menu
     }
 }
 
+require_once __DIR__.'/inc/bs-widget.php';
+
 // Перевод строк (PollyLang)
 add_action('init', function() {
   // Шапка
-  pll_register_string('Валюта', 'Валюта');
-  pll_register_string('Язык', 'Язык');
-  pll_register_string('Вход', 'Вход');
-  pll_register_string('Регистрация', 'Регистрация');
-  pll_register_string('Введите поисковой запрос', 'Введите поисковой запрос');
-  pll_register_string('Поиск', 'Поиск');
-  pll_register_string('Корзина', 'Корзина');
- // Карточка товара
-  pll_register_string('Ребенок - Взрослый', 'Ребенок - Взрослый');
-   pll_register_string('Подробнее', 'Подробнее');
+//  pll_register_string('Валюта', 'Валюта');
+//  pll_register_string('Язык', 'Язык');
+//  pll_register_string('Вход', 'Вход');
+//  pll_register_string('Регистрация', 'Регистрация');
+//  pll_register_string('Введите поисковой запрос', 'Введите поисковой запрос');
+//  pll_register_string('Поиск', 'Поиск');
+//  pll_register_string('Корзина', 'Корзина');
+// // Карточка товара
+//  pll_register_string('Ребенок - Взрослый', 'Ребенок - Взрослый');
+//   pll_register_string('Подробнее', 'Подробнее');
 });
