@@ -1,0 +1,64 @@
+.language-wpglobus {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .language-wpglobus .fa-angle-down {
+    position: absolute;
+    top: 20px;
+    right: -20px; }
+  .language-wpglobus .select {
+    width: 120px;
+    height: 60px; }
+  .language-wpglobus .dropdown-styled {
+    height: 80px; }
+    .language-wpglobus .dropdown-styled > ul {
+      background: none;
+      position: relative;
+      -webkit-transition: all 0.3s ease 0s;
+      -o-transition: all 0.3s ease 0s;
+      transition: all 0.3s ease 0s;
+      opacity: 1;
+      top: 10px;
+      right: 0;
+      text-align: center;
+      border: none;
+      z-index: 10; }
+      .language-wpglobus .dropdown-styled > ul > li > a {
+				color: white;
+        background: transparent; }
+.header-top ul li ul li  {
+  width: auto;
+}
+.language-wpglobus .dropdown-styled > ul > li > a{
+  background: transparent;
+}
+
+.language-wpglobus .dropdown-styled > ul > li > a:hover{
+  background: none;
+}
+
+.language-wpglobus .dropdown-styled > ul > li > ul{
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -ms-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.language-wpglobus .dropdown-styled > ul > li:hover  ul {
+  top: 0;
+  opacity: 1;
+}
+.language-wpglobus .fa-angle-down {
+  position: absolute;
+  top: 23px;
+  color: white;
+  right: -2px;
+  z-index: 12000;
+}

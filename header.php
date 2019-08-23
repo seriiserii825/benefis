@@ -19,6 +19,7 @@
     <!-- style CSS
 ============================================ -->
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/my.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
 
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -50,26 +51,22 @@
                                     <label><i class="fa fa-map-marker"></i>Or. Chisinau, str. Teatrala, 6 </label>
                                 </li>
                                 <li>
-                                    <!--                                    <label><i class="fa fa-cog"></i>-->
-									<?php //pll_e('Валюта'); ?><!--: </label>-->
-                                    <span class="currenty">
-                                        <?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?></span>
-
+                                    <label><i class="fa fa-cog"></i>Валюта: </label>
+                                    <span class="currenty"><?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?></span>
                                 </li>
                                 <li>
-                                    <label>
-                                        <i class="fa fa-globe"></i>
-                                        <!--										--><?php //pll_e('Язык'); ?><!--:-->
-                                    </label>
-                                    <!--                                    <a href="#">-->
-                                    <!--                                        <span>-->
-									<?php //echo pll_current_language('name'); ?><!-- </span>-->
-                                    <!--                                        <i class="fa fa-angle-down"></i>-->
-                                    <!--                                    </a>-->
-                                    <!--                                    <ul>-->
-									<?php //pll_the_languages(); ?><!--</ul>-->
-
-									<?php the_widget('WPGlobusWidget'); ?>
+                                    <div class="language-wpglobus">
+                                        <label>
+                                            <i class="fa fa-globe"></i>
+                                            Язык:
+                                        </label>
+                                        <div class="select">
+											<?php if (!dynamic_sidebar('wpglobus')): ?>
+                                                <h4>language widget</h4>
+											<?php endif; ?>
+                                            <i class="fa fa-angle-down"></i>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </nav>
@@ -106,10 +103,12 @@
                     <div class="single-menu">
                         <nav>
                             <ul>
-                                <!--                                <li><a href="#">-->
-								<?php //pll_e('Вход'); ?><!--</a></li>-->
-                                <!--                                <li><a class="lastbdr" href="#">-->
-								<?php //pll_e('Регистрация'); ?><!--</a></li>-->
+                                <li>
+                                    <a href="#">Вход</a>
+                                </li>
+                                <li>
+                                    <a class="lastbdr" href="#">Регистрация</a>
+                                </li>
                             </ul>
                         </nav>
                     </div>

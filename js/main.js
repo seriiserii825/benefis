@@ -12,12 +12,12 @@
     /*----------------------------
      scrollUp
     ------------------------------ */
-    $.scrollUp({
-        scrollText: '<i class="fa fa-angle-up"></i>',
-        easingType: 'linear',
-        scrollSpeed: 900,
-        animation: 'fade'
-    });
+    // $.scrollUp({
+    //     scrollText: '<i class="fa fa-angle-up"></i>',
+    //     easingType: 'linear',
+    //     scrollSpeed: 900,
+    //     animation: 'fade'
+    // });
     /*----------------------------
      mixItUp
     ------------------------------ */
@@ -36,7 +36,7 @@
        }
       });
       $( "#amount" ).val( "£" + $( "#slider-range" ).slider( "values", 0 ) +
-       " - £" + $( "#slider-range" ).slider( "values", 1 ) ); 
+       " - £" + $( "#slider-range" ).slider( "values", 1 ) );
     /*----------------------------
      wow js active
     ------------------------------ */
@@ -64,7 +64,7 @@
         navigation: true,
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     });
-    
+
     $(".feature-carousel").owlCarousel({
         autoPlay: false,
         slideSpeed: 2000,
@@ -83,7 +83,7 @@
         navigation: true,
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     });
-    
+
     $(".feature-carousel-np").owlCarousel({
         autoPlay: false,
         slideSpeed: 2000,
@@ -120,7 +120,7 @@
         navigation: true,
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
     });
-    
+
     $(".feature-carousel-np6").owlCarousel({
         autoPlay: false,
         slideSpeed: 2000,
@@ -189,7 +189,7 @@
         itemsTablet: [768, 2],
         itemsMobile: [480, 3]
     });
-    
+
     /*----------------------------
      jQuery MeanMenu
     ------------------------------ */
@@ -220,7 +220,7 @@
         $.fancybox(ez.getGalleryList());
         return false;
     });
-	
+
 	 /*----------------------------
      counterUp
     ------------------------------ */
