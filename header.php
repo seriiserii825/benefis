@@ -140,10 +140,8 @@
                     <div class="search-categori">
                         <div class="search-box">
                             <form action="#">
-                                <!--                                <input type="text" class="form-control input-sm" maxlength="64" placeholder="-->
-								<?php //pll_e('Введите поисковой запрос'); ?><!-- ...">-->
-                                <!--                                <button type="submit">-->
-								<?php //pll_e('Поиск'); ?><!--</button>-->
+                                <input type="text" class="form-control input-sm" maxlength="64" placeholder=" Введите поисковой запрос...">
+                                <button type="submit">Поиск </button>
                             </form>
                         </div>
                     </div>
