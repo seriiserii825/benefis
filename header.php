@@ -48,17 +48,17 @@
                         <nav>
                             <ul>
                                 <li>
-                                    <label><i class="fa fa-map-marker"></i>Or. Chisinau, str. Teatrala, 6 </label>
+                                    <label><i class="fa fa-map-marker"></i><?php echo carbon_get_theme_option('crb_address'.get_lang()); ?> </label>
                                 </li>
                                 <li>
-                                    <label><i class="fa fa-cog"></i>Валюта: </label>
+                                    <label><i class="fa fa-cog"></i><?php echo esc_html__( 'Валюта', 'benefis' ); ?>: </label>
                                     <span class="currenty"><?php echo do_shortcode('[woocommerce_currency_switcher_drop_down_box]'); ?></span>
                                 </li>
                                 <li>
                                     <div class="language-wpglobus">
                                         <label>
                                             <i class="fa fa-globe"></i>
-                                            Язык:
+                                            <?php echo esc_html__( 'Language', 'benefis' ); ?>:
                                         </label>
                                         <div class="select">
 											<?php if (!dynamic_sidebar('wpglobus')): ?>
