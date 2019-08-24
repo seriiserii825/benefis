@@ -293,37 +293,37 @@ body {
     margin-right: 8px;
     margin-top: -4px;
 }
-.header-top ul li ul li {
-    display: block;
-    width: 100px;
-    margin-right: 0;
-}
-.header-top ul li ul li a {
-    padding: 15px 20px;
-}
-.header-top ul li ul li a {
-    padding: 5px 20px;
-    display: block;
-    background: #eee;
-    margin: 5px;
-    border-radius: 2px;
-}
-.header-top ul li ul li a:hover {
-    background: #ffa200;
-    color: #fff;
-}
-.single-drop ul li span {
-    margin-right: 5px;
-    color: #fff;
-}
-.single-drop ul li span:hover {
-    color: #fff;
-    transition: .3s;
-}
-.single-drop ul li a i {
-    font-weight: 700;
-    color:#fff;
-}
+/*.header-top ul li ul li {*/
+/*    display: block;*/
+/*    width: 100px;*/
+/*    margin-right: 0;*/
+/*}*/
+/*.header-top ul li ul li a {*/
+/*    padding: 15px 20px;*/
+/*}*/
+/*.header-top ul li ul li a {*/
+/*    padding: 5px 20px;*/
+/*    display: block;*/
+/*    background: #eee;*/
+/*    margin: 5px;*/
+/*    border-radius: 2px;*/
+/*}*/
+/*.header-top ul li ul li a:hover {*/
+/*    background: #ffa200;*/
+/*    color: #fff;*/
+/*}*/
+/*.single-drop ul li span {*/
+/*    margin-right: 5px;*/
+/*    color: #fff;*/
+/*}*/
+/*.single-drop ul li span:hover {*/
+/*    color: #fff;*/
+/*    transition: .3s;*/
+/*}*/
+/*.single-drop ul li a i {*/
+/*    font-weight: 700;*/
+/*    color:#fff;*/
+/*}*/
 .single-menu {
     text-align: right;
 }
