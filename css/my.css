@@ -32,5 +32,17 @@
 	height: 1px;
 	background: yellow;
 }
-
+.bs-main {
+	display: grid;
+	grid-template-columns: 300px 1fr;
+	grid-gap: 30px;
+}
+.bs-products-loops {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}
+.product-loop {
+	margin-bottom: 0;
+}
 
