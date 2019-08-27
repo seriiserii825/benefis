@@ -5734,3 +5734,56 @@ span.required {
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
 	display: none;
 }
+.product-image-big__images {
+	margin-bottom: 20px;
+	width: 422px;
+	height: 720px;
+	overflow: hidden;
+}
+.product-image-big__images-wrap {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: flex;
+	transition: all .8s ease;
+}
+.product-image-big__images img {
+	width: 422px;
+}
+.product-image-gallery {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 10px;
+	width: 422px;
+}
+
+.product-image-gallery li {
+	position: relative;
+	height: 100px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.product-image-gallery img {
+	opacity: .4;
+	transition: all .4s ease;
+}
+.product-image-gallery img.active {
+	opacity: 1;
+}
+
+.product-image-gallery img:hover {
+	opacity: 1;
+}
+
+.product-image-gallery span {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background: #b32927;
+	color: #fff;
+	text-align: center;
+	width: 32px;
+	padding: 2px 0;
+}
+
