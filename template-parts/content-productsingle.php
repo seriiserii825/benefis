@@ -8,6 +8,5 @@
  */
 
 ?>
-
 <?php the_content() ?>
 

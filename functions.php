@@ -18,7 +18,6 @@
 	require_once __DIR__ . '/inc/bs-widget.php';
 	require_once __DIR__ . '/inc/bs-styles.php';
 
-
 	function benefis_content_width()
 	{
 		// This variable is intended to be overruled from themes.
@@ -57,12 +56,19 @@
 		require get_template_directory() . '/inc/jetpack.php';
 	}
 
-	/**
-	 * Load WooCommerce compatibility file.
-	 */
-	if (class_exists('WooCommerce')) {
-		require get_template_directory() . '/inc/woocommerce.php';
+
+	add_action('after_setup_theme', 'woocommerce_support');
+	function woocommerce_support()
+	{
+		add_theme_support('woocommerce');
 	}
+
+//	/**
+//	 * Load WooCommerce compatibility file.
+//	 */
+//	if (class_exists('WooCommerce')) {
+//		require get_template_directory() . '/inc/woocommerce.php';
+//	}
 
 
 	/*
@@ -235,9 +241,6 @@
 			$output .= "$indent</ul></div></div>\n";
 		}
 	}
-
-
-	//require_once __DIR__.'/inc/bs-widget.php';
 
 	// Перевод строк (PollyLang)
 	add_action('init', function () {

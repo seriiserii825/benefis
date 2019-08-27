@@ -29,7 +29,6 @@
         <div class="bs-main">
 			<?php get_sidebar(); ?>
 
-
 			<?php do_action('woocommerce_before_main_content'); ?>
 
 			<?php
