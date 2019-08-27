@@ -15,10 +15,6 @@
  ============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
-    <!-- style CSS
-============================================ -->
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/style.css">
-    <link rel="stylesheet" href="<?php echo get_template_directory_uri() ?>/css/my.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
 
     <script src="<?php echo get_template_directory_uri() ?>/js/vendor/modernizr-2.8.3.min.js"></script>
@@ -134,10 +130,14 @@
                     </div>
                     <div class="search-categori">
                         <div class="search-box">
-                            <form action="#">
-                                <input type="text" class="form-control input-sm" maxlength="64" placeholder=" Введите поисковой запрос...">
-                                <button type="submit">Поиск</button>
-                            </form>
+                            <?php if(!dynamic_sidebar('sidebar-search')): ?>
+                                <h1>Место для виджета поиска</h1>
+                            <?php endif; ?>
+
+<!--                            <form action="#">-->
+<!--                                <input type="text" class="form-control input-sm" maxlength="64" name="s" placeholder="Введите поисковой запрос...">-->
+<!--                                <button type="submit">Поиск</button>-->
+<!--                            </form>-->
                         </div>
                     </div>
                 </div>
@@ -159,11 +159,11 @@
                             </span>
                         </a>
                         <div class="restrain small-cart-content">
-                            <p class="total"> <?php echo esc_html__( 'Sum', 'benefis' ); ?>:
+                            <p class="total"> <?php echo esc_html__('Sum', 'benefis'); ?>:
                                 <span class="amount">155 mdl</span>
                             </p>
                             <p class="buttons">
-                                <a href="<?php echo $cart_url;?>" class="button"><?php echo esc_html__( 'To cart', 'benefis' ); ?></a>
+                                <a href="<?php echo $cart_url; ?>" class="button"><?php echo esc_html__('To cart', 'benefis'); ?></a>
                             </p>
                         </div>
                     </div>
@@ -179,8 +179,7 @@
                     <div class="main-menu">
                         <nav>
 							<?php
-								wp_nav_menu(array(
-									'menu' => '',              // (string) Название выводимого меню (указывается в админке при создании меню, приоритетнее
+								wp_nav_menu(array('menu' => '',              // (string) Название выводимого меню (указывается в админке при создании меню, приоритетнее
 									// чем указанное местоположение theme_location - если указано, то параметр theme_location игнорируется)
 									'container' => '',           // (string) Контейнер меню. Обворачиватель ul. Указывается тег контейнера (по умолчанию в тег div)
 									'container_class' => '',              // (string) class контейнера (div тега)

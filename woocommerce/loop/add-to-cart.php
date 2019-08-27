@@ -20,8 +20,7 @@
 	}
 
 	global $product;
-	global $post, $woocommerce;
-//	$woocommerce->cart->add_to_cart( $post->ID );
+	//	vardump($product->add_to_cart_url());
 
 	$benefis_attr_str = $product->get_attribute('type_custom');
 
@@ -68,6 +67,5 @@
 				</a>
 			</div>
 		</div>
-		', esc_url($product->add_to_cart_url()), //		esc_attr( isset( $args['quantity'] ) ? $args['quantity'] : 1 ),
-			esc_attr(isset($args['class']) ? $args['class'] : 'button'), isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '', esc_html($product->add_to_cart_text())), $product, $args);
+		', esc_url($product->add_to_cart_url()), esc_attr(isset($args['class']) ? $args['class'] : 'button'), isset($args['attributes']) ? wc_implode_html_attributes($args['attributes']) : '', esc_html($product->add_to_cart_text())), $product, $args);
 

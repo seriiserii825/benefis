@@ -1,4 +1,4 @@
-(function($) {
+jQuery( document ).ready(function( $ ) {
     "use strict";
 
     /*---------------------
@@ -26,17 +26,17 @@
     /*----------------------------
 	price-slider active
    ---------------------------- */
-      $( "#slider-range" ).slider({
-       range: true,
-       min: 40,
-       max: 600,
-       values: [ 100, 540 ],
-       slide: function( event, ui ) {
-        $( "#amount" ).val( "£" + ui.values[ 0 ] + " - £" + ui.values[ 1 ] );
-       }
-      });
-      $( "#amount" ).val( "£" + $( "#slider-range" ).slider( "values", 0 ) +
-       " - £" + $( "#slider-range" ).slider( "values", 1 ) );
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 40,
+        max: 600,
+        values: [ 100, 540 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "£" + ui.values[ 0 ] + " - £" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "£" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - £" + $( "#slider-range" ).slider( "values", 1 ) );
     /*----------------------------
      wow js active
     ------------------------------ */
@@ -51,15 +51,15 @@
         slideSpeed: 2000,
         items: 5,
         itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 3],
-        [992, 4],
-		[1199, 5]
-      ],
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 3],
+            [992, 4],
+            [1199, 5]
+        ],
         pagination: false,
         navigation: true,
         navigationText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
@@ -70,14 +70,14 @@
         slideSpeed: 2000,
         items: 4,
         itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 2],
-        [992, 3],
-        [1199, 4]
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 2],
+            [992, 3],
+            [1199, 4]
         ],
         pagination: true,
         navigation: true,
@@ -89,14 +89,14 @@
         slideSpeed: 2000,
         items: 4,
         itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 2],
-        [992, 3],
-        [1199, 4]
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 2],
+            [992, 3],
+            [1199, 4]
         ],
         pagination: false,
         navigation: true,
@@ -107,14 +107,14 @@
         slideSpeed: 2000,
         items: 3,
         itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 2],
-        [992, 2],
-        [1199, 3]
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 2],
+            [992, 2],
+            [1199, 3]
         ],
         pagination: false,
         navigation: true,
@@ -126,14 +126,14 @@
         slideSpeed: 2000,
         items: 6,
         itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 4],
-        [992, 4],
-        [1199, 5]
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 4],
+            [992, 4],
+            [1199, 5]
         ],
         pagination: false,
         navigation: true,
@@ -165,15 +165,15 @@
         autoPlay: false,
         slideSpeed: 2000,
         items: 1,
-		itemsCustom : [
-        [0, 1],
-        [450, 1],
-        [480, 2],
-        [600, 2],
-        [700, 2],
-        [768, 1],
-        [992, 1],
-        [1199, 1]
+        itemsCustom : [
+            [0, 1],
+            [450, 1],
+            [480, 2],
+            [600, 2],
+            [700, 2],
+            [768, 1],
+            [992, 1],
+            [1199, 1]
         ],
         pagination: true,
         navigation: false,
@@ -221,9 +221,9 @@
         return false;
     });
 
-	 /*----------------------------
-     counterUp
-    ------------------------------ */
+    /*----------------------------
+	counterUp
+   ------------------------------ */
     $('.counter2').counterUp({
         delay: 10,
         time: 1000
@@ -231,10 +231,10 @@
 
     /* Custom */
 
-$('.menu-item-has-children > a').on('click', function(){
-  $(this).parent().toggleClass('open');
-  $(this).parent().find('.cat-left-drop-menu').toggleClass("open");
-  return false;
-});
+    $('.menu-item-has-children > a').on('click', function(){
+        $(this).parent().toggleClass('open');
+        $(this).parent().find('.cat-left-drop-menu').toggleClass("open");
+        return false;
+    });
 
-})(jQuery);
+});

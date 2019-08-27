@@ -36,7 +36,6 @@ if ( post_password_required() ) {
 var imgtitles = [];
 jQuery('.woocommerce-product-gallery__wrapper').children('div').each(function(){
     var imgTitle = jQuery(this).find('a').find('img').attr('alt');
-    console.log(imgTitle);
     imgtitles.push(imgTitle);
 });
 if( jQuery('ol.flex-control-nav').length && jQuery('ol.flex-control-nav').children().length>1 ){
