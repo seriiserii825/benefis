@@ -3,6 +3,7 @@
 	function benefis_scripts()
 	{
 		wp_enqueue_style('benefis-style', get_stylesheet_uri());
+		wp_enqueue_style('benefis-magnific-style', get_stylesheet_directory_uri() . '/css/magnific-popup.css');
 		wp_enqueue_style('benefis-custom-style', get_stylesheet_directory_uri() . '/css/my.css');
 
 		wp_enqueue_script('benefis-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);

@@ -237,4 +237,39 @@ jQuery( document ).ready(function( $ ) {
         return false;
     });
 
+    let imgZoom = function(){
+        $('#js-product-image-big__images .img-wrap').zoom();
+    };
+    imgZoom();
+
+    let singleProductGallery = function () {
+        $('#js-woocommerce-product-gallery__trigger').on('click', function(event) {
+            event.preventDefault();
+
+            let smallGallery = $(this).attr('href');
+
+            $(smallGallery).magnificPopup({
+                delegate: 'a',
+                type:'image',
+                gallery: {
+                    enabled: true
+                },
+                // callbacks: {
+                //     open: function() {
+                //         alert('popup is open')
+                //     },
+                //     close: function() {
+                //          alert('popup is closed')
+                //     }
+                //     // e.t.c.
+                // }
+            }).magnificPopup('open');
+        });
+
+        $('body').on('click', '#js-product-image-gallery a',  function (e) {
+            e.preventDefault();
+        });
+    };
+    singleProductGallery();
+
 });

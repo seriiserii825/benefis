@@ -107,6 +107,8 @@
     <!-- plugins js
 ============================================ -->
     <script src="<?php echo get_template_directory_uri() ?>/js/plugins.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/js/jquery.zoom.min.js"></script>
+    <script src="<?php echo get_template_directory_uri() ?>/js/jquery.magnific-popup.min.js"></script>
 
 <!-- main js
 ============================================ -->
