@@ -14,6 +14,7 @@
 	require_once __DIR__ . '/inc/carbon-fields/cb.php';
 	require_once __DIR__ . '/inc/func.php';
 	require_once __DIR__ . '/inc/func-woocommerce.php';
+	require_once __DIR__ . '/inc/func-remove-woocommerce.php';
 	require_once __DIR__ . '/inc/bs-setup.php';
 	require_once __DIR__ . '/inc/bs-widget.php';
 	require_once __DIR__ . '/inc/bs-styles.php';

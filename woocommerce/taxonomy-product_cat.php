@@ -1,25 +1,59 @@
 <?php
-/**
- * The Template for displaying products in a product category. Simply includes the archive template
- *
- * This template can be overridden by copying it to yourtheme/woocommerce/taxonomy-product_cat.php.
- *
- * HOWEVER, on occasion WooCommerce will need to update template files and you
- * (the theme developer) will need to copy the new files to your theme to
- * maintain compatibility. We try to do this as little as possible, but it does
- * happen. When this occurs the version of the template file will be bumped and
- * the readme will list any important changes.
- *
- * @see 	    https://docs.woocommerce.com/document/template-structure/
- * @package 	WooCommerce/Templates
- * @version     1.6.4
- */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly
-}
-
-//wc_get_template( 'archive-product.php' );
-
+	if (!defined('ABSPATH')) {
+		exit; // Exit if accessed directly
+	}
+	//wc_get_template( 'archive-product.php' );
 ?>
-<h1>Category page</h1>
+
+<?php
+	/**
+	 * The template for displaying all pages
+	 *
+	 * This is the template that displays all pages by default.
+	 * Please note that this is the WordPress construct of pages
+	 * and that other 'pages' on your WordPress site may use a
+	 * different template.
+	 *
+	 * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+	 *
+	 * @package benefis
+	 */
+
+	get_header();
+?>
+    <div class="slider">
+        <div class="slider_video_parent">
+            <span></span>
+            <video src="http://benefis.myihor.ru//images/video/10000000_690038651457564_3112166903667890767_n.mp4" class="videoslider" autoplay="" loop="" muted="" width="1280" height="720"></video>
+        </div>
+    </div>
+    <div class="container">
+        <div class="bs-main">
+			<?php get_sidebar(); ?>
+
+			<?php do_action('woocommerce_before_main_content'); ?>
+
+			<?php if (have_posts()): ?>
+
+				<?php while (have_posts()): ?><?php the_post(); ?>
+
+					<?php do_action('woocommerce_product_loop_start'); ?>
+
+					<?php wc_get_template_part('content', 'product'); ?>
+
+					<?php do_action('woocommerce_product_loop_end'); ?>
+
+				<?php endwhile; ?><?php wp_reset_postdata(); ?>
+
+			<?php else: ?>
+                <h2><?php echo esc_html__( 'No products...', 'benefis' ); ?></h2>
+            <?php endif; ?>
+
+
+			<?php do_action('woocommerce_after_main_content'); ?>
+
+        </div>
+    </div>
+<?php
+	get_footer();

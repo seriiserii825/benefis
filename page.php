@@ -14,11 +14,6 @@
 
 	get_header();
 ?>
-<!--    <script>-->
-<!--		jQuery(document).ready(function () {-->
-<!--			$('.woocommerce').removeClass();-->
-<!--		});-->
-<!--    </script>-->
     <div class="slider">
         <div class="slider_video_parent">
             <span></span>
