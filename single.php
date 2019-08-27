@@ -10,12 +10,6 @@
 	get_header();
 ?>
 
-    <script>
-		jQuery(document).ready(function () {
-			$('.woocommerce').removeClass();
-		});
-    </script>
-
     <div class="container">
         <div class="row">
             <div class="bs-main">

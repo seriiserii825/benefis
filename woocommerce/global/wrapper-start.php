@@ -14,11 +14,18 @@
 	 * @package    WooCommerce/Templates
 	 * @version     3.3.0
 	 */
-	
+
 	if (!defined('ABSPATH')) {
 		exit; // Exit if accessed directly
 	}
 ?>
+<?php if (is_single()): ?>
+<div class="woocommerce">
+    <div class="single-product">
+	<?php else: ?>
+    <div class="bs-content">
+		<?php endif; ?>
 
-<div class="bs-content">
-    <div class="bs-products-loops">
+		<?php if (!is_single()): ?>
+        <div class="bs-products-loops">
+			<?php endif; ?>

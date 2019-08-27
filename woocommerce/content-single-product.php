@@ -88,7 +88,6 @@ $('form.variations_form.cart').submit(function() {
 	?>
 
 	<div class="summary entry-summary">
-		<h3><?php the_title(); ?></h3>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.
