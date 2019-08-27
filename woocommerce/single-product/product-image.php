@@ -34,28 +34,25 @@
 	));
 ?>
 <div class="<?php echo esc_attr(implode(' ', array_map('sanitize_html_class', $wrapper_classes))); ?>" data-columns="<?php echo esc_attr($columns); ?>" style="opacity: 0; transition: opacity .25s ease-in-out;">
+
     <a href="#" class="woocommerce-product-gallery__trigger">
         <img draggable="false" class="emoji" alt="🔍" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f50d.svg">
     </a>
-
     <div class="flex-viewport">
-        <figure class="woocommerce-product-gallery__wrapper" style="width: 1200%">
+        <figure class="woocommerce-product-gallery__wrapper">
 			<?php
 				if ($product->get_image_id()) {
 					$html = wc_get_gallery_image_html($post_thumbnail_id, true);
 				} else {
 					$html = '<div class="woocommerce-product-gallery__image--placeholder">';
-					$html .= sprintf('<img src="%s" alt="%s" class="wp-post-image " />', esc_url(wc_placeholder_img_src('woocommerce_single')), esc_html__('Awaiting product image', 'woocommerce'));
+					$html .= sprintf('<img src="%s" alt="%s" class="wp-post-image" />', esc_url(wc_placeholder_img_src('woocommerce_single')), esc_html__('Awaiting product image', 'woocommerce'));
 					$html .= '</div>';
 				}
+
 				echo apply_filters('woocommerce_single_product_image_thumbnail_html', $html, $post_thumbnail_id); // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
 
 				do_action('woocommerce_product_thumbnails');
 			?>
         </figure>
-        <ol class="flex-control-nav flex-control-thumbs">
-            <li>
-            </li>
-        </ol>
     </div>
 </div>
