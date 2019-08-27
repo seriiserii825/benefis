@@ -1,3 +1,4 @@
+<!--<h2>Content product</h2>-->
 <?php
 ///**
 // * The template for displaying product content within loops.

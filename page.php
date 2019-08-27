@@ -14,11 +14,11 @@
 
 	get_header();
 ?>
-    <script>
-		jQuery(document).ready(function () {
-			$('.woocommerce').removeClass();
-		});
-    </script>
+<!--    <script>-->
+<!--		jQuery(document).ready(function () {-->
+<!--			$('.woocommerce').removeClass();-->
+<!--		});-->
+<!--    </script>-->
     <div class="slider">
         <div class="slider_video_parent">
             <span></span>
@@ -26,18 +26,17 @@
         </div>
     </div>
     <div class="container">
-            <div class="row">
-                <div class="bs-main">
-				<?php get_sidebar(); ?><?php
-					while (have_posts()) :
-						the_post();
+        <div class="row">
+            <div class="bs-main">
+				<?php get_sidebar(); ?>
 
-						get_template_part('template-parts/content', 'page');
+				<?php while (have_posts()) :
+					the_post();
 
-					endwhile; // End of the loop.
-				?>
+					get_template_part('template-parts/content', 'page');
+
+				endwhile; // End of the loop.?>
             </div>
         </div>
     </div>
-<?php
-	get_footer();
+<?php get_footer();
