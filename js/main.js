@@ -254,20 +254,7 @@ jQuery( document ).ready(function( $ ) {
                 gallery: {
                     enabled: true
                 },
-                // callbacks: {
-                //     open: function() {
-                //         alert('popup is open')
-                //     },
-                //     close: function() {
-                //          alert('popup is closed')
-                //     }
-                //     // e.t.c.
-                // }
             }).magnificPopup('open');
-        });
-
-        $('body').on('click', '#js-product-image-gallery a',  function (e) {
-            e.preventDefault();
         });
     };
     singleProductGallery();
