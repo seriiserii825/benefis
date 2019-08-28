@@ -565,9 +565,9 @@
     .main-menu {
         display: none;
     }
-    .header-top {
-        display: none;
-    }
+    /*.header-top {*/
+    /*    display: none;*/
+    /*}*/
     .logo-area {
         text-align: center;
     }
@@ -688,9 +688,6 @@
     }
     .ma-footer-container .payment {
         text-align: center;
-    }
-    .main-area .left-category-menu {
-        display: none;
     }
     .feature-carousel-tab .col-xs-6 {
         width: 100%;

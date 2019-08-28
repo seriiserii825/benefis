@@ -5396,11 +5396,11 @@ span.required {
 	border: 2px solid #fff;
 }
 
-.woocommerce div.product div.images .flex-control-thumbs li {
+.woocommerce .wpgis-slider-nav li {
 	position: relative;
 }
 
-.woocommerce div.product div.images .flex-control-thumbs li span.flexthum-title {
+.woocommerce .wpgis-slider-nav li span.flexthum-title {
 	position: absolute;
 	left: 0;
 	bottom: 0;
@@ -5699,6 +5699,7 @@ span.required {
 	grid-gap: 10px;
 }
 
+
 .bs-products-loops {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -5730,4 +5731,38 @@ span.required {
 }
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
 	display: none;
+}
+.slider.wpgis-slider-nav {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+	list-style-type: none;
+}
+
+@media screen and (max-width: 1200px) {
+	.bs-main	{
+		display: block;
+	}
+	.bs-sidebar {
+		max-width: 400px;
+		height: auto;
+	}
+}
+@media screen and (max-width: 992px) {
+	.woocommerce div.product div.images {
+		float: none;
+	}
+	.woocommerce div.product div.summary {
+		float: none;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.bs-products-loops {
+		display: block;
+	}
+
+	.bs-products-loops .product-loop {
+		margin-bottom: 20px;
+	}
 }

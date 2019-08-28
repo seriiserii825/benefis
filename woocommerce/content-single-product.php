@@ -32,20 +32,6 @@
 	}
 ?>
 <script>
-	// jQuery(window).load(function () {
-		// var imgtitles = [];
-		// jQuery('.woocommerce-product-gallery__wrapper').children('div').each(function () {
-		// 	var imgTitle = jQuery(this).find('a').find('img').attr('alt');
-		// 	console.log(imgTitle);
-		// 	imgtitles.push(imgTitle);
-		// });
-		// if (jQuery('ol.flex-control-nav').length && jQuery('ol.flex-control-nav').children().length > 1) {
-		// 	for (i = 0; i < imgtitles.length; ++i) {
-		// 		jQuery('ol.flex-control-nav li:nth-child(' + (i + 1) + ')').append('<span class="flexthum-title">' + imgtitles[i] + '</span>');
-		// 	}
-		// }
-
-// fancybox init
 
 // razmer
 // 		$('#pa_razmer').change(function () {

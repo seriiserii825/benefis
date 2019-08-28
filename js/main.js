@@ -195,32 +195,6 @@ jQuery( document ).ready(function( $ ) {
     ------------------------------ */
     jQuery('nav#dropdown').meanmenu();
     /*----------------------------
-
-    /*----------------------------
-     fancybox active
-    ------------------------------ */
-    // $(document).ready(function() {
-    //     $('.fancybox').fancybox();
-    // });
-    /*----------------------------
-         Elevate Zoom active
-    ------------------------------ */
-    // $("#zoom_03").elevateZoom({
-    //     constrainType: "height",
-    //     zoomType: "lens",
-    //     containLensZoom: true,
-    //     gallery: 'gallery_01',
-    //     cursor: 'pointer',
-    //     galleryActiveClass: "active"
-    // });
-
-    //pass the images to Fancybox
-    // $("#zoom_03").bind("click", function(e) {
-    //     var ez = $('#zoom_03').data('elevateZoom');
-    //     $.fancybox(ez.getGalleryList());
-    //     return false;
-    // });
-
     /*----------------------------
 	counterUp
    ------------------------------ */
@@ -237,62 +211,30 @@ jQuery( document ).ready(function( $ ) {
         return false;
     });
 
-    // let imgZoom = function(){
-    //     $('#js-product-image-big__images .img-wrap').zoom();
-    // };
-    // imgZoom();
-    //
-    // let showOnClickImage = function () {
-    //     $('#js-product-image-gallery img').each(function () {
-    //         let alt = $(this).attr('alt');
-    //         let span = '<span>' + alt + '</span>';
-    //         $(this).parent().append(span);
-    //     });
-    //
-    //     $('#js-product-image-gallery li:first-child img').addClass('active');
-    //
-    //     $('#js-product-image-gallery img').on('click', function (e) {
-    //         e.preventDefault();
-    //         let img = $(this);
-    //
-    //         $('#js-product-image-gallery img').removeClass('active');
-    //         img.addClass('active');
-    //         let alt = img.attr('alt');
-    //         let imgId = alt.slice(1);
-    //
-    //         let imgWidth = 422;
-    //         let imgLeft = 0;
-    //
-    //
-    //         if (imgId === 1) {
-    //             imgLeft = 0;
-    //         } else {
-    //             imgLeft = '-' + (imgWidth * (imgId - 1));
-    //         }
-    //
-    //         $('#js-product-image-big__images .product-image-big__images-wrap').css({
-    //             'left': imgLeft + 'px'
-    //         });
-    //     });
-    // };
-    // showOnClickImage();
-    //
-    // let singleProductGallery = function () {
-    //     $('#js-woocommerce-product-gallery__trigger').on('click', function(event) {
-    //         event.preventDefault();
-    //
-    //         let smallGallery = $(this).attr('href');
-    //         console.log(smallGallery);
-    //
-    //         $(smallGallery).magnificPopup({
-    //             delegate: 'a',
-    //             type:'image',
-    //             gallery: {
-    //                 enabled: true
-    //             },
-    //         }).magnificPopup('open');
-    //     });
-    // };
-    // singleProductGallery();
+    let wpgisGallery = function(){
+        $('#wpgis-gallery').slick('unslick');
 
+        $('#wpgis-gallery li img').each(function () {
+            let thumbAlt = $(this).attr('alt');
+            $(this).parent().append('<span class="flexthum-title">' + thumbAlt + '</span>');
+        });
+
+        let slickCurrentHeight =  $('.wpgis-slider-for .slick-slide.slick-current').css('height');
+        $('.wpgis-slider-for').css({
+            'height': slickCurrentHeight
+        });
+
+        $('#wpgis-gallery li').on('click', function () {
+            let index = $(this).index();
+            $('.wpgis-slider-for').slick('slickGoTo', index);
+
+            let slickNexttHeight =  $('.wpgis-slider-for .slick-slide').eq(index + 1).css('height');
+
+
+            $('.wpgis-slider-for').animate({
+                'height': slickNexttHeight
+            }, 400);
+        });
+    };
+    wpgisGallery();
 });

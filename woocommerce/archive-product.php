@@ -20,6 +20,7 @@
             <video src="http://benefis.myihor.ru//images/video/10000000_690038651457564_3112166903667890767_n.mp4" class="videoslider" autoplay="" loop="" muted="" width="1280" height="720"></video>
         </div>
     </div>
+
     <div class="container">
         <div class="bs-main">
 			<?php get_sidebar(); ?>

@@ -22,7 +22,7 @@
 
 	get_header();
 ?>
-    <?php require_once __DIR__.'/../template-parts/content-slider.php';?>
+<!--    --><?php //require_once __DIR__.'/../template-parts/content-slider.php';?>
 
     <div class="container">
         <div class="bs-main">
