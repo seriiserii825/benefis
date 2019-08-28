@@ -5695,7 +5695,7 @@ span.required {
 
 .bs-main {
 	display: grid;
-	grid-template-columns: 300px 1fr;
+	grid-template-columns: 300px 860px;
 	grid-gap: 10px;
 }
 
@@ -5718,9 +5718,6 @@ span.required {
 	margin-top: 0;
 }
 
-.single-product .onsale {
-	display: none;
-}
 .header-area .header-menu .dgwt-wcas-sf-wrapp input[type=search].dgwt-wcas-search-input {
 	height: 46px;
 	border: none;
@@ -5734,85 +5731,3 @@ span.required {
 .dgwt-wcas-sf-wrapp .dgwt-wcas-search-submit:before {
 	display: none;
 }
-/*.product-images {*/
-/*	position: relative;*/
-/*	width: 422px;*/
-/*}*/
-/*.product-image-big__images {*/
-/*	position: relative;*/
-/*	margin-bottom: 20px;*/
-/*	width: 422px;*/
-/*	height: 560px;*/
-/*	overflow: hidden;*/
-/*}*/
-/*.product-image-big__images-wrap {*/
-/*	position: relative;*/
-/*	top: 0;*/
-/*	left: 0;*/
-/*	display: flex;*/
-/*	flex-wrap: nowrap;*/
-/*	width: 1500%;*/
-/*	transition: all .4s ease;*/
-/*}*/
-/*.product-image-big__images img {*/
-/*	width: 422px;*/
-/*}*/
-/*.product-image-big__images .img-wrap{*/
-/*	width: 422px;*/
-/*	height: 560px;*/
-/*}*/
-/*.product-image-gallery {*/
-/*	display: grid;*/
-/*	grid-template-columns: repeat(4, 1fr);*/
-/*	grid-gap: 10px;*/
-/*	width: 422px;*/
-/*}*/
-
-/*.product-image-gallery li {*/
-/*	position: relative;*/
-/*	height: 100px;*/
-/*	overflow: hidden;*/
-/*	cursor: pointer;*/
-/*}*/
-
-/*.product-image-gallery img {*/
-/*	opacity: .4;*/
-/*	transition: all .4s ease;*/
-/*}*/
-/*.product-image-gallery img.active {*/
-/*	opacity: 1;*/
-/*}*/
-
-/*.product-image-gallery img:hover {*/
-/*	opacity: 1;*/
-/*}*/
-
-/*.product-image-gallery span {*/
-/*	position: absolute;*/
-/*	left: 0;*/
-/*	bottom: 0;*/
-/*	background: #b32927;*/
-/*	color: #fff;*/
-/*	text-align: center;*/
-/*	width: 32px;*/
-/*	padding: 2px 0;*/
-/*}*/
-/*.woocommerce-product-gallery__trigger {*/
-/*	position: absolute;*/
-/*	top: 20px;*/
-/*	right: 20px;*/
-/*	display: flex;*/
-/*	justify-content: center;*/
-/*	align-items: center;*/
-/*	width: 30px;*/
-/*	height: 30px;*/
-/*	background: white;*/
-/*	border-radius: 50%;*/
-/*	z-index: 10;*/
-/*}*/
-/*.woocommerce div.product div.images .woocommerce-product-gallery__trigger::before {*/
-/*	border: none;*/
-/*}*/
-/*.woocommerce div.product div.images .woocommerce-product-gallery__trigger::after {*/
-/*	background: none;*/
-/*}*/
