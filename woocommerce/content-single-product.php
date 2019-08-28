@@ -40,51 +40,51 @@
 		 * @hooked woocommerce_show_product_sale_flash - 10
 		 * @hooked woocommerce_show_product_images - 20
 		 */
-		//		do_action( 'woocommerce_before_single_product_summary' );
+				do_action( 'woocommerce_before_single_product_summary' );
 	?>
-    <div class="product-images">
-        <div class="product-image-big">
-            <a href="#js-product-image-big__images" class="woocommerce-product-gallery__trigger" id="js-woocommerce-product-gallery__trigger">
-                <img draggable="false" class="emoji" alt="🔍" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f50d.svg">
-            </a>
-            <div class="product-image-big__images" id="js-product-image-big__images">
-                <div class="product-image-big__images-wrap">
-                    <a href="<?php echo get_template_directory_uri() . '/img/product-single/1.jpg'; ?>" class="img-wrap">
-                        <img src="<?php echo get_template_directory_uri() . '/img/product-single/1.jpg'; ?>" alt="#1">
-                    </a>
-                    <a href="<?php echo get_template_directory_uri() . '/img/product-single/2.jpg'; ?>" class="img-wrap">
-                        <img src="<?php echo get_template_directory_uri() . '/img/product-single/2.jpg'; ?>" alt="#2">
-                    </a>
-                    <a href="<?php echo get_template_directory_uri() . '/img/product-single/3.jpg'; ?>" class="img-wrap">
-                        <img src="<?php echo get_template_directory_uri() . '/img/product-single/3.jpg'; ?>" alt="#3">
-                    </a>
-                    <a href="<?php echo get_template_directory_uri() . '/img/product-single/4.jpg'; ?>" class="img-wrap">
-                        <img src="<?php echo get_template_directory_uri() . '/img/product-single/4.jpg'; ?>" alt="#4">
-                    </a>
-                    <a href="<?php echo get_template_directory_uri() . '/img/product-single/5.jpg'; ?>" class="img-wrap">
-                        <img src="<?php echo get_template_directory_uri() . '/img/product-single/5.jpg'; ?>" alt="#5">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <ul class="product-image-gallery" id="js-product-image-gallery">
-            <li>
-                <img src="<?php echo get_template_directory_uri() . '/img/product-single/small/1.jpg'; ?>" alt="#1">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri() . '/img/product-single/small/2.jpg'; ?>" alt="#2">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri() . '/img/product-single/small/3.jpg'; ?>" alt="#3">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri() . '/img/product-single/small/4.jpg'; ?>" alt="#4">
-            </li>
-            <li>
-                <img src="<?php echo get_template_directory_uri() . '/img/product-single/small/5.jpg'; ?>" alt="#5">
-            </li>
-        </ul>
-    </div>
+<!--    <div class="product-images">-->
+<!--        <div class="product-image-big">-->
+<!--            <a href="#js-product-image-big__images" class="woocommerce-product-gallery__trigger" id="js-woocommerce-product-gallery__trigger">-->
+<!--                <img draggable="false" class="emoji" alt="🔍" src="https://s.w.org/images/core/emoji/12.0.0-1/svg/1f50d.svg">-->
+<!--            </a>-->
+<!--            <div class="product-image-big__images" id="js-product-image-big__images">-->
+<!--                <div class="product-image-big__images-wrap">-->
+<!--                    <a href="--><?php //echo get_template_directory_uri() . '/img/product-single/1.jpg'; ?><!--" class="img-wrap">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/1.jpg'; ?><!--" alt="#1">-->
+<!--                    </a>-->
+<!--                    <a href="--><?php //echo get_template_directory_uri() . '/img/product-single/2.jpg'; ?><!--" class="img-wrap">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/2.jpg'; ?><!--" alt="#2">-->
+<!--                    </a>-->
+<!--                    <a href="--><?php //echo get_template_directory_uri() . '/img/product-single/3.jpg'; ?><!--" class="img-wrap">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/3.jpg'; ?><!--" alt="#3">-->
+<!--                    </a>-->
+<!--                    <a href="--><?php //echo get_template_directory_uri() . '/img/product-single/4.jpg'; ?><!--" class="img-wrap">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/4.jpg'; ?><!--" alt="#4">-->
+<!--                    </a>-->
+<!--                    <a href="--><?php //echo get_template_directory_uri() . '/img/product-single/5.jpg'; ?><!--" class="img-wrap">-->
+<!--                        <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/5.jpg'; ?><!--" alt="#5">-->
+<!--                    </a>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <ul class="product-image-gallery" id="js-product-image-gallery">-->
+<!--            <li>-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/small/1.jpg'; ?><!--" alt="#1">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/small/2.jpg'; ?><!--" alt="#2">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/small/3.jpg'; ?><!--" alt="#3">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/small/4.jpg'; ?><!--" alt="#4">-->
+<!--            </li>-->
+<!--            <li>-->
+<!--                <img src="--><?php //echo get_template_directory_uri() . '/img/product-single/small/5.jpg'; ?><!--" alt="#5">-->
+<!--            </li>-->
+<!--        </ul>-->
+<!--    </div>-->
 	<?php
 		/**
 		 * Hook: woocommerce_before_single_product_summary.

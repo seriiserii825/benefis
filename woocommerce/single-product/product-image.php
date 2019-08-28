@@ -42,6 +42,7 @@
         <figure class="woocommerce-product-gallery__wrapper">
 			<?php
 				if ($product->get_image_id()) {
+
 					$html = wc_get_gallery_image_html($post_thumbnail_id, true);
 				} else {
 					$html = '<div class="woocommerce-product-gallery__image--placeholder">';

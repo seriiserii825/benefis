@@ -5810,3 +5810,9 @@ span.required {
 	border-radius: 50%;
 	z-index: 10;
 }
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger::before {
+	border: none;
+}
+.woocommerce div.product div.images .woocommerce-product-gallery__trigger::after {
+	background: none;
+}
