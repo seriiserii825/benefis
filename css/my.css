@@ -5746,11 +5746,13 @@ span.required {
 	overflow: hidden;
 }
 .product-image-big__images-wrap {
-	position: absolute;
+	position: relative;
 	top: 0;
 	left: 0;
 	display: flex;
-	transition: all .8s ease;
+	flex-wrap: nowrap;
+	width: 1500%;
+	transition: all .4s ease;
 }
 .product-image-big__images img {
 	width: 422px;
@@ -5766,7 +5768,7 @@ span.required {
 	width: 422px;
 }
 
-.product-image-gallery a {
+.product-image-gallery li {
 	position: relative;
 	height: 100px;
 	overflow: hidden;

@@ -242,11 +242,47 @@ jQuery( document ).ready(function( $ ) {
     };
     imgZoom();
 
+    let showOnClickImage = function () {
+        $('#js-product-image-gallery img').each(function () {
+            let alt = $(this).attr('alt');
+            let span = '<span>' + alt + '</span>';
+            $(this).parent().append(span);
+        });
+
+        $('#js-product-image-gallery li:first-child img').addClass('active');
+
+        $('#js-product-image-gallery img').on('click', function (e) {
+            e.preventDefault();
+            let img = $(this);
+
+            $('#js-product-image-gallery img').removeClass('active');
+            img.addClass('active');
+            let alt = img.attr('alt');
+            let imgId = alt.slice(1);
+
+            let imgWidth = 422;
+            let imgLeft = 0;
+
+
+            if (imgId === 1) {
+                imgLeft = 0;
+            } else {
+                imgLeft = '-' + (imgWidth * (imgId - 1));
+            }
+
+            $('#js-product-image-big__images .product-image-big__images-wrap').css({
+                'left': imgLeft + 'px'
+            });
+        });
+    };
+    showOnClickImage();
+
     let singleProductGallery = function () {
         $('#js-woocommerce-product-gallery__trigger').on('click', function(event) {
             event.preventDefault();
 
             let smallGallery = $(this).attr('href');
+            console.log(smallGallery);
 
             $(smallGallery).magnificPopup({
                 delegate: 'a',
