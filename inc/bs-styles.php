@@ -13,6 +13,7 @@
 		wp_enqueue_script('jquery');
 
 		wp_enqueue_script('benefis-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '', true);
+		wp_enqueue_script('benefis-slick-js', get_template_directory_uri() . '/js/slick.min.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery.nivo.slider-js', get_template_directory_uri() . '/custom-slider/js/jquery.nivo.slider.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-home-js', get_template_directory_uri() . '/custom-slider/home.js', array('jquery'), '', true);
 		wp_enqueue_script('benefis-jquery.mixitup.min-js', get_template_directory_uri() . '/js/jquery.mixitup.min.js', array('jquery'), '', true);

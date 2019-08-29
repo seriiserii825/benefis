@@ -18,3 +18,38 @@
 
 	}
 
+	// Get Woocommerce variation price based on product ID
+	function get_variation_price_by_id($product_id, $variation_id){
+		$currency_symbol = get_woocommerce_currency_symbol();
+		$product = new WC_Product_Variable($product_id);
+		$variations = $product->get_available_variations();
+		$var_data = [];
+		foreach ($variations as $variation) {
+			if($variation['variation_id'] == $variation_id){
+				$display_regular_price = $variation['display_regular_price'].'<span class="currency">'. $currency_symbol .'</span>';
+				$display_price = $variation['display_price'].'<span class="currency">'. $currency_symbol .'</span>';
+			}
+		}
+
+		//Check if Regular price is equal with Sale price (Display price)
+		if ($display_regular_price == $display_price){
+			$display_price = false;
+		}
+
+		$priceArray = array(
+			'display_regular_price' => $display_regular_price,
+			'display_price' => $display_price
+		);
+		$priceObject = (object)$priceArray;
+		return $priceObject;
+	}
+
+	add_filter('woocommerce_get_price_html', 'func_change_price', 100, 2);
+	function func_change_price($price, $product){
+//		vardump($product->get_sale_price());
+//		vardump($product->get_regular_price());
+//		vardump(get_woocommerce_currency());
+//		vardump(get_woocommerce_currency_symbol());
+//		vardump(wc_price($product->get_price()));
+////		vardump(get_option('woocommerce_currency'));
+	}

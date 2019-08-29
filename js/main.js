@@ -237,4 +237,31 @@ jQuery( document ).ready(function( $ ) {
         });
     };
     wpgisGallery();
+
+    let addCurrentMenuItemToTopMenu = function () {
+        if(window.location.href === 'http://benefis-wp.myihor.ru/ru/' || window.location.href === 'http://benefis-wp.myihor.ru/en/'){
+            $('#menu-osnovnoe-menyu-na-rumynskom > li:first-child').addClass('current-menu-item');
+        }
+    };
+    addCurrentMenuItemToTopMenu();
+
+    let showTopSubMenu = function () {
+        $('#menu-osnovnoe-menyu-na-rumynskom a').on('click', function(e){
+        	if($(window).width() > 1024){
+                if($(this).parent().hasClass('menu-item-has-children')){
+                    e.preventDefault();
+                    $(this).parent().find('.sub-menu').slideToggle();
+                }
+            }
+        });
+    };
+    showTopSubMenu();
+
+    let sandwitch = function () {
+        $('.sandwitch').on('click', function () {
+        	$('.top-menu nav > ul').slideToggle();
+            $(this).toggleClass('sandwitch--active');
+        });
+    };
+    sandwitch();
 });

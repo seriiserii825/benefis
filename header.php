@@ -120,24 +120,27 @@
                 </div>
                 <div class="col-lg-7 col-md-6 col-sm-9 col-xs-12">
                     <div class="block-header">
-                        <div class="phone"><i class="fa fa-phone"></i>+373 (22) 213-256</div>
-                        <div class="phone"><i class="fa fa-phone"></i>+373 (22) 229-710</div>
+                        <div class="phone"><i class="fa fa-phone"></i>
+                            <a href="tel:<?php echo carbon_get_theme_option('crb_phone_1'); ?>"><?php echo carbon_get_theme_option('crb_phone_1'); ?></a>
+                        </div>
+                        <div class="phone"><i class="fa fa-phone"></i>
+                            <a href="tel:<?php echo carbon_get_theme_option('crb_phone_2'); ?>"><?php echo carbon_get_theme_option('crb_phone_2'); ?></a>
+                        </div>
+                        <div class="phone"><i class="fa fa-phone"></i>
+                            <a href="tel:<?php echo carbon_get_theme_option('crb_phone_3'); ?>"><?php echo carbon_get_theme_option('crb_phone_3'); ?></a>
+                        </div>
                         <div class="email">
-                            <a href="mailto:benefisshop.com"><i class="fa fa-envelope-o"></i>support@
-                                <span>benefisshop.com</span>
+                            <a href="mailto:<?php echo carbon_get_theme_option('crb_mail'); ?>">
+                                <i class="fa fa-envelope-o"></i> <?php echo carbon_get_theme_option('crb_mail'); ?></span>
                             </a>
                         </div>
                     </div>
+
                     <div class="search-categori">
                         <div class="search-box">
-                            <?php if(!dynamic_sidebar('sidebar-search')): ?>
+							<?php if (!dynamic_sidebar('sidebar-search')): ?>
                                 <h1>Место для виджета поиска</h1>
-                            <?php endif; ?>
-
-<!--                            <form action="#">-->
-<!--                                <input type="text" class="form-control input-sm" maxlength="64" name="s" placeholder="Введите поисковой запрос...">-->
-<!--                                <button type="submit">Поиск</button>-->
-<!--                            </form>-->
+							<?php endif; ?>
                         </div>
                     </div>
                 </div>
@@ -176,7 +179,15 @@
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <!-- main-menu start -->
-                    <div class="main-menu">
+                    <div class="top-navbar">
+                        <h3><?php echo esc_html__( 'Menu', 'benefis' ); ?></h3>
+                        <div class="sandwitch">
+                            <div class="sandwitch__line sandwitch__line--top"></div>
+                            <div class="sandwitch__line sandwitch__line--middle"></div>
+                            <div class="sandwitch__line sandwitch__line--bottom"></div>
+                        </div>
+                    </div>
+                    <div class="top-menu">
                         <nav>
 							<?php
 								wp_nav_menu(array('menu' => '',              // (string) Название выводимого меню (указывается в админке при создании меню, приоритетнее
@@ -193,7 +204,7 @@
 									'link_before' => '',              // (string) Текст перед анкором (текстом) ссылки
 									'link_after' => '',              // (string) Текст после анкора (текста) ссылки
 									'depth' => 0,               // (integer) Глубина вложенности (0 - неограничена, 2 - двухуровневое меню)
-									'walker' => new Child_Wrap(),              // (object) Класс собирающий меню. Default: new Walker_Nav_Menu
+//									'walker' => new Child_Wrap(),              // (object) Класс собирающий меню. Default: new Walker_Nav_Menu
 									'theme_location' => 'topmenu'               // (string) Расположение меню в шаблоне. (указывается ключ которым было зарегистрировано меню в функции register_nav_menus)
 								));
 							?>
