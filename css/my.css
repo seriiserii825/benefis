@@ -5945,3 +5945,24 @@ span.required {
 	text-decoration: line-through;
 	opacity: .6;
 }
+.product-loop span.onsale,
+.woocommerce span.onsale {
+	display: block;
+	position: absolute;
+	top: 5px;
+	left: 4px;
+	width: 40px;
+	height: 40px;
+	color: white;
+	background-color: transparent;
+	background-image: url('http://benefisshop.com/benefis3/theme/default/images/red-tags.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.product-loop .single-product {
+	position: relative;
+}
+.product-loop span.onsale {
+	line-height: 3;
+	z-index: 1000;
+}
