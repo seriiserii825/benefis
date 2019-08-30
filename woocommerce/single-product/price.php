@@ -23,7 +23,7 @@
 	global $product;
 	global $woocommerce;
 
-	require_once __DIR__.'/../../inc/func-woocommerce.php';
+	require_once __DIR__ . '/../../inc/func-woocommerce.php';
 
 ?>
 
@@ -37,33 +37,61 @@
 
 		global $product;
 		$id = $product->get_id();
-		$adult_id = 1597;
-		$small_id = 1598;
+		//		$adult_id = 1597;
+		//		$small_id = 1598;
+		//
+		//		$adult_variation_price = get_variation_price_by_id($id, $adult_id);
+		//		$adult_variation_regular_price =  $adult_variation_price->display_regular_price;
+		//		$adult_variation_sale_price = $adult_variation_price->display_price;
+		//
+		//		$small_variation_price = get_variation_price_by_id($id, $small_id);
+		//		$small_variation_regular_price =  $small_variation_price->display_regular_price;
+		//		$small_variation_sale_price = $small_variation_price->display_price;
+	?>
 
-		$adult_variation_price = get_variation_price_by_id($id, $adult_id);
-		$adult_variation_regular_price =  $adult_variation_price->display_regular_price;
-		$adult_variation_sale_price = $adult_variation_price->display_price;
 
-		$small_variation_price = get_variation_price_by_id($id, $small_id);
-		$small_variation_regular_price =  $small_variation_price->display_regular_price;
-		$small_variation_sale_price = $small_variation_price->display_price;
+	<?php
+		global $product;
+		if ($product->is_type('simple')) { ?><?php vardump('simple ' . $product->get_price_html()); ?><?php } ?>
+	<?php
+		if ($product->product_type == 'variable') {
+			$available_variations = $product->get_available_variations();
+			$count = count($available_variations) - 1;
+			$variation_id = $available_variations[$count]['variation_id']; // Getting the variable id of just the 1st product. You can loop $available_variations to get info about each variation.
+			$variable_product1 = new WC_Product_Variation($variation_id);
+			$regular_price = $variable_product1->regular_price;
+			$sales_price = $variable_product1->sale_price;
+
+			$adult = [];
+			$child = [];
+
+			foreach ($available_variations as $variation) {
+				if ($variation['attributes']['attribute_pa_type_custom'] == 'vzr') {
+					$adult['regular'] = $variation["display_regular_price"];
+					$adult['sales'] = $variation["display_price"];
+				}
+				if ($variation['attributes']['attribute_pa_type_custom'] == 'child') {
+					$child['regular'] = $variation["display_regular_price"];
+					$child['sales'] = $variation["display_price"];
+				}
+			}
+		}
 	?>
 
     <div class="price-item price-adult">
         <span class="valute"><?php echo $currency; ?></span>
-        <span class="number regular"><?php echo $adult_variation_regular_price; ?></span>
-        <span class="number sale"><?php echo $adult_variation_sale_price; ?></span>
+        <span class="number regular"><?php echo $adult['regular']; ?></span>
+        <span class="number sale"><?php echo $adult['sales']; ?></span>
         <span> - </span>
         <span><?php echo $type_arr[0]; ?></span>
     </div>
     <div class="price-item price-small">
         <span class="valute"><?php echo $currency; ?></span>
-        <span class="number regular"><?php echo $small_variation_regular_price; ?></span>
-        <span class="number sale"><?php echo $small_variation_sale_price; ?></span>
+        <span class="number regular"><?php echo $child['regular']; ?></span>
+        <span class="number sale"><?php echo $child['sales']; ?></span>
         <span> - </span>
         <span><?php echo $type_arr[1]; ?></span>
     </div>
-
 
 
     <div class="currency-switcher">
