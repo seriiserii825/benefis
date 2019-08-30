@@ -264,4 +264,26 @@ jQuery( document ).ready(function( $ ) {
         });
     };
     sandwitch();
+
+    let removeWelcome = function(){
+        $('.single-menu').contents().filter(function(){
+            return (this.nodeType == 3);
+        }).remove();
+    };
+    removeWelcome();
+
+    // let putLabelLoginToInput = function() {
+    //     let labelLogin = $('.login-widget .tml-login .tml-log-wrap label');
+    //     let labelLoginText = labelLogin.text();
+    //     $('.login-widget .tml-login .tml-log-wrap input').attr('placeholder', labelLoginText);
+    //
+    //     let labelPasswd = $('.login-widget .tml-login .tml-pwd-wrap label');
+    //     let labelPasswdText = labelPasswd.text();
+    //     $('.login-widget .tml-login .tml-pwd-wrap input').attr('placeholder', labelPasswdText);
+    //
+    //     labelLogin.remove();
+    //     labelPasswd.remove();
+    //
+    // };
+    // putLabelLoginToInput();
 });

@@ -44,3 +44,18 @@
 	}
 
 	add_action('widgets_init', 'benefis_search_init');
+
+	function benefis_register_init()
+	{
+		register_sidebar(array(
+			'name' => esc_html__('Sidebar register', 'benefis'),
+			'id' => 'sidebar-register',
+			'description' => esc_html__('Add widgets here.', 'benefis'),
+			'before_widget' => '',
+			'after_widget' => '',
+			'before_title' => '',
+			'after_title' => '',
+		));
+	}
+
+	add_action('widgets_init', 'benefis_register_init');

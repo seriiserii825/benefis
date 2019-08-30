@@ -93,14 +93,21 @@
                         </li>
                     </ul>
                     <div class="single-menu">
+
                         <nav>
                             <ul>
-                                <li>
-                                    <a href="#">Вход</a>
-                                </li>
-                                <li>
-                                    <a class="lastbdr" href="#">Регистрация</a>
-                                </li>
+	                            <?php if(is_user_logged_in()): ?>
+                                    <li>
+                                        <a href="http://benefis-wp.myihor.ru/logout/">Выйти</a>
+                                    </li>
+	                            <?php else: ?>
+                                    <li>
+                                        <a href="http://benefis-wp.myihor.ru/login/">Вход</a>
+                                    </li>
+                                    <li>
+                                        <a class="lastbdr" href="http://benefis-wp.myihor.ru/register/">Регистрация</a>
+                                    </li>
+	                            <?php endif; ?>
                             </ul>
                         </nav>
                     </div>
