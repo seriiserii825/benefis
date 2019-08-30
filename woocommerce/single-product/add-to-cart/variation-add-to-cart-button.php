@@ -13,7 +13,6 @@ global $product;
 ?>
 <div class="woocommerce-variation-add-to-cart variations_button">
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
-
 	<?php
 	do_action( 'woocommerce_before_add_to_cart_quantity' );
 

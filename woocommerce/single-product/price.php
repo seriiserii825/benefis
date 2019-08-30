@@ -97,17 +97,6 @@
     <div class="currency-switcher">
         <span>currency: </span><?php echo do_shortcode('[woocommerce_currency_switcher_link_list]'); ?>
     </div>
-
-
-	<?php
-
-		//	    vardump($product->get_sale_price());
-		//	    vardump($product->get_regular_price());
-		//	    vardump(get_woocommerce_currency());
-		//	    vardump(get_woocommerce_currency_symbol());
-		//        vardump(get_option('woocommerce_currency'));
-
-	?>
 </div>
 
 
